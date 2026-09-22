@@ -3,12 +3,11 @@
   "name": "AI Image Detector",
   "version": "1.0",
   "description": "Detect whether an image is Real or AI-Generated.",
-  "permissions": ["contextMenus"],
+  "permissions": ["contextMenus", "notifications"],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "popup.html",
     "default_icon": "icon.png"
   },
   "icons": {
