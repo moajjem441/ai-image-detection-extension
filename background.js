@@ -7,6 +7,7 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
+
 // ইউজার ছবিতে রাইট-ক্লিক করে ক্লিক করলে
 chrome.contextMenus.onClicked.addListener(async (info) => {
   if (info.menuItemId === "checkAIImage") {
