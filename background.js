@@ -6,9 +6,11 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
+
 chrome.contextMenus.onClicked.addListener(async (info) => {
   if (info.menuItemId === "checkAIImage") {
     const imageUrl = info.srcUrl;
+    
 
     try {
       const response = await fetch("http://localhost:8000/predict-url", {
@@ -28,6 +30,7 @@ chrome.contextMenus.onClicked.addListener(async (info) => {
         message: `Confidence: ${confidence}%`,
         priority: 2
       });
+
 
     } catch (err) {
       chrome.notifications.create({
