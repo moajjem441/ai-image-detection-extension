@@ -42,4 +42,5 @@ chrome.contextMenus.onClicked.addListener(async (info) => {
       });
     }
   }
+  
 });
