@@ -57,7 +57,8 @@ def predict_image(payload: ImageRequest):
             "confidence": round(confidence, 4),
             "raw_score": round(prediction, 4)
         }
-    except Exception as e:
+
+    except Exception as  e:
         raise HTTPException(status_code=400, detail=str(e))
 
 if __name__ == "__main__":
